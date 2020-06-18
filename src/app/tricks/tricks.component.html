@@ -1,0 +1,21 @@
+<mat-list>
+  <mat-list-item *ngFor="let action of trickActions">
+    <button mat-icon-button (click)="onActionClicked(action)">
+      <mat-icon matListIcon>{{action.icon}}</mat-icon>
+    </button>
+
+    <h3 matLine>{{action.name}}</h3>
+  </mat-list-item>
+</mat-list>
+
+<mat-toolbar color="primary">
+  Guide
+</mat-toolbar>
+
+<mat-card *ngFor="let trickGuide of trickGuides">
+  <mat-card-header>
+    <mat-card-title>{{trickGuide.name}}</mat-card-title>
+    <mat-card-subtitle>{{trickGuide.instructions}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{trickGuide.image}}">
+</mat-card>

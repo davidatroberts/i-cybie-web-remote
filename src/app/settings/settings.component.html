@@ -1,0 +1,16 @@
+<h1 mat-dialg-title>Settings</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Infrared IP Address</mat-label>
+    <input matInput [(ngModel)]="data.ipAddress">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-slide-toggle [(ngModel)]="data.walkupCharger">Walkup Charger</mat-slide-toggle>
+    <textarea matInput hidden></textarea>
+  </mat-form-field>
+</div>
+<div>
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button (click)="onOKClick()" cdkFocusInitial>Ok</button>
+</div>

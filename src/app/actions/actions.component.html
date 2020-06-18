@@ -1,0 +1,48 @@
+<mat-list>
+  <mat-list-item *ngFor="let action of actions">
+    <button mat-icon-button (click)="onActionClicked(action)">
+      <mat-icon matListIcon>{{action.icon}}</mat-icon>
+    </button>
+
+    <h3 matLine>{{action.name}}</h3>
+  </mat-list-item>
+</mat-list>
+
+<mat-divider></mat-divider>
+
+<mat-list>
+  <mat-list-item *ngFor="let action of guardActions">
+    <button mat-icon-button (click)="onActionClicked(action)">
+      <mat-icon matListIcon>{{action.icon}}</mat-icon>
+    </button>
+
+    <h3 matLine>{{action.name}}</h3>
+  </mat-list-item>
+</mat-list>
+
+<mat-divider></mat-divider>
+
+<mat-grid-list cols="3" rowHeight="1.5:1">
+  <mat-grid-tile></mat-grid-tile>
+  <mat-grid-tile>
+    <button class="direction_arrow" mat-icon-button (click)="onUpArrowClicked()">
+      <mat-icon>keyboard_arrow_up</mat-icon>
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile></mat-grid-tile>
+  <mat-grid-tile>
+    <button class="direction_arrow" mat-icon-button (click)="onLeftArrowClicked()">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button class="direction_arrow" mat-icon-button (click)="onRightArrowClicked()">
+      <mat-icon>stop</mat-icon>
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button class="direction_arrow" mat-icon-button (click)="onStopClicked()">
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>

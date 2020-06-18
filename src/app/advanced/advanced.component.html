@@ -1,0 +1,22 @@
+<mat-list>
+  <mat-list-item *ngFor="let action of advancedActions">
+    <button mat-icon-button (click)="onActionClicked(action)">
+      <mat-icon matListIcon>{{action.icon}}</mat-icon>
+    </button>
+
+    <h3 matLine>{{action.name}}</h3>
+  </mat-list-item>
+</mat-list>
+
+<div *ngIf="hasWalkUpCharger">
+  <mat-divider></mat-divider>
+  <mat-list>
+    <mat-list-item *ngFor="let action of walkupActions">
+      <button mat-icon-button (click)="onActionClicked(action)">
+        <mat-icon matListIcon>{{action.icon}}</mat-icon>
+      </button>
+
+      <h3 matLine>{{action.name}}</h3>
+    </mat-list-item>
+  </mat-list>
+</div>
